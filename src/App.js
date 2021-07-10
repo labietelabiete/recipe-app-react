@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import './App.css';
 
 import Recipe from './Recipe';
@@ -10,7 +11,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('banana');
+  const [query, setQuery] = useState('chicken');
 
   useEffect(() => {
     getRecipes();
@@ -42,7 +43,7 @@ const App = () => {
       <div className="recipes">
         {recipes.map(recipe => (
           <Recipe
-            key={recipe.recipe.label}
+            key={uuidv4()}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}

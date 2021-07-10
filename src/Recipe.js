@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from "uuid";
 
 import style from './recipe.module.css';
 
@@ -8,7 +9,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
       <h1 >{title}</h1>
       <ol>
         {ingredients.map(ingredient => (
-          <li>{ingredient.text}</li>
+          <li key={uuidv4()}>{ingredient.text}</li>
         ))}
       </ol>
       <p>{calories} calories</p>
