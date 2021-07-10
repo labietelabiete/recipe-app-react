@@ -39,12 +39,12 @@ const App = () => {
   return (
     <div className="App container">
       <div className="row">
-        <div className="col col-5"></div>
-        <div className="col col-2 header d-flex flex-column align-items-center text-center">
-          <img src={logo} alt="" className="w-100" />
-          {/* <h2>Search your favourite Recipe!</h2> */}
+        <div className="col"></div>
+        <div className="col col-3 header align-items-center text-center">
+          <img src={logo} alt="" className="w-100 mb-2" />
+          <h2>Search your favourite Recipe!</h2>
         </div>
-        <div className="col col-5"></div>
+        <div className="col"></div>
       </div>
 
       <form onSubmit={getSearch} className="search-form">
