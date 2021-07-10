@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import './App.scss';
 
+import logo from './img/logo.png';
+
 import Recipe from './components/Recipe/Recipe';
 
 const App = () => {
@@ -36,7 +38,17 @@ const App = () => {
 
   return (
     <div className="App container">
+      <div className="row">
+        <div className="col col-5"></div>
+        <div className="col col-2 header d-flex flex-column align-items-center text-center">
+          <img src={logo} alt="" className="w-100" />
+          {/* <h2>Search your favourite Recipe!</h2> */}
+        </div>
+        <div className="col col-5"></div>
+      </div>
+
       <form onSubmit={getSearch} className="search-form">
+
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit"><i className="fas fa-search"></i></button>
       </form>
