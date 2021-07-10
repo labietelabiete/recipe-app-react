@@ -47,7 +47,7 @@ const App = () => {
             title={recipe.recipe.label}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
-            uri={recipe.recipe.url}
+            url={recipe.recipe.url}
           />
         ))}
       </div>

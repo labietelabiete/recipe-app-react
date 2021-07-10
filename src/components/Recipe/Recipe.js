@@ -28,7 +28,7 @@ const Recipe = ({ title, image, ingredients, url }) => {
         <div className="col col-6 m-0 p-0">
         </div>
         <div className="col col-6 d-flex align-items-center justify-content-end m-0 p-0">
-          <a href={url} target="_blank" rel="opener" className="recipe-uri">Read more</a>
+          <a href={url} target="_blank" className="recipe-url">Read more</a>
         </div>
       </div>
     </div >
