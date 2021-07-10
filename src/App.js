@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import './App.css';
+import './App.scss';
 
 import Recipe from './components/Recipe/Recipe';
 
@@ -35,19 +35,19 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App container">
       <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
-        <button className="search-button" type="submit">Search</button>
+        <button className="search-button" type="submit"><i className="fas fa-search"></i></button>
       </form>
-      <div className="recipes col col-12">
+      <div className="recipes row d-flex justify-content-center">
         {recipes.map(recipe => (
           <Recipe
             key={uuidv4()}
             title={recipe.recipe.label}
-            calories={recipe.recipe.calories}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
+            uri={recipe.recipe.url}
           />
         ))}
       </div>

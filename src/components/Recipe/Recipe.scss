@@ -1,17 +1,94 @@
+$primary-color: #F56C7E;
+$secondary-color: #D16CB0;
+$terciary-color: #FFC759;
+
 .recipe {
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgb(71, 71, 71);
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   background: white;
-  min-width: 40%;
-  .image{
-    border-radius:50%;
-    width: 200px;
-    height: 200px;
+  border-radius: 2rem;
+  backdrop-filter: blur(2rem);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  margin: 40px;
+  padding: 80px;
+  .recipe-header{
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    padding: 10px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+
+    .recipe-title{
+      font-weight: bold;
+      background: linear-gradient(to right top, $primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      // color: #FFC759;
+      // color: #0A2342;
+      font-size: 35px;
+    }
+    .recipe-image{
+      width: 100px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+    }
+  .recipe-ingredients{
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3)
+    );
+    // background: linear-gradient(
+    //   to right bottom,
+    //   rgba(245, 108, 126, 0.4),
+    //   rgba(209, 108, 176, 0.3)
+    // );
+    border-radius: 2rem;
+    margin-top: 40px;
+    padding: 10px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    .ingredients-title{
+      font-weight: bold;
+      margin: 15px;
+      margin-bottom: 25px;
+      padding: 5px;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+      opacity: 0.8;
+    }
+    li{
+      list-style-type: none;
+      font-weight: bold;
+      color: #DA6CA2;
+      opacity: 0.8;
+
+      // background: linear-gradient(to right top, $primary-color, $secondary-color);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+
+    }
+  }
+  .recipe-uri{
+    text-decoration: none;
+    border: none;
+    background: $terciary-color;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 199, 89, 1)
+      rgba(119, 104, 75, 0.3)
+    );
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 30px;
+    // opacity: 0.8;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   }
   }
 
