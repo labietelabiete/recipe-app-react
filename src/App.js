@@ -40,7 +40,7 @@ const App = () => {
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">Search</button>
       </form>
-      <div className="recipes">
+      <div className="recipes col col-12">
         {recipes.map(recipe => (
           <Recipe
             key={uuidv4()}
