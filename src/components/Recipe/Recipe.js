@@ -1,11 +1,11 @@
 import React from 'react';
 import { v4 as uuidv4 } from "uuid";
 
-import style from './recipe.module.css';
+import './Recipe.scss';
 
 const Recipe = ({ title, calories, image, ingredients }) => {
   return (
-    <div className={style.recipe}>
+    <div className="recipe">
       <h1 >{title}</h1>
       <ol>
         {ingredients.map(ingredient => (
@@ -13,7 +13,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
         ))}
       </ol>
       <p>{calories} calories</p>
-      <img className={style.image} src={image} alt="" />
+      <img className="image" src={image} alt="" />
     </div >
   );
 };
